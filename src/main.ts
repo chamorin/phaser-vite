@@ -1,8 +1,8 @@
-import Phaser from 'phaser';
+import { Scene, Scale, AUTO, Game } from 'phaser';
 
 import './style.css';
 
-class Example extends Phaser.Scene {
+class Example extends Scene {
   constructor() {
     super();
   }
@@ -50,10 +50,10 @@ class Example extends Phaser.Scene {
 }
 
 const config = {
-  type: Phaser.AUTO,
+  type: AUTO,
   scale: {
-    mode: Phaser.Scale.ENVELOP,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
+    mode: Scale.ENVELOP,
+    autoCenter: Scale.CENTER_BOTH,
     width: window.innerWidth,
     height: window.innerHeight
   },
@@ -66,4 +66,4 @@ const config = {
   scene: Example
 };
 
-const game = new Phaser.Game(config);
+new Game(config);
